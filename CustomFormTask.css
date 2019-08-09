@@ -1,0 +1,102 @@
+input {
+	width: 100%;
+	height: 100%;
+}
+
+#addressDiv{
+	height: 10%;
+}
+label {
+	width: 100%;
+}
+
+body {
+	font-size: 0.9rem;
+}
+
+/* Navbar style */
+
+.navbar {
+	background: #0b334d;
+}
+
+a {
+
+	color: #d5d9db;
+}
+
+a:active {
+	color: #f0f3f5;
+	font-weight: 600;
+}
+
+a:hover {
+	color: #f0f3f5;
+	font-weight: 600;
+}
+
+.dropdown-menu {
+	background-color: #d5d9db;
+}
+
+.dropdown-item {
+	color:  #0b334d;
+}
+
+.dropdown-item:hover {
+	background-color: #c0c8cc;
+	font-weight: 600;
+	color: #0b334d;
+}
+
+/*Breadcrumb style*/
+
+.breadcrumb {
+	background-color: #d5d9db;
+}
+
+#administrationBreadcrumb {
+	color:  #0b334d;
+}
+
+#employee {
+	background-color: #7297b0;
+	color: #dfe7ed;
+	font-weight: 700;
+	height: 30px;
+	border-top: 2px solid #0b334d;
+	border-bottom: 2px solid #0b334d;
+}
+
+#filter {
+	background-color: #7297b0;
+	color: #dfe7ed;
+	font-weight: 700;
+	height: 30px;
+	border-top: 2px solid #0b334d;
+	border-bottom: 2px solid #0b334d;
+}
+
+#mainForm .col-form-label {
+	border-bottom: 1px dashed #d5d9db;
+}
+
+button {
+	width: 150px;
+}
+
+.form-check-input {
+	margin-left: 50%;
+}
+
+#visibleFor {
+	width: 100%;
+}
+
+#teamled {
+	width: 100%;
+}
+
+.col-9 {
+	max-width: 100%;
+}

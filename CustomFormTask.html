@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Meta data -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap Css Link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Custom Css -->
+  <link rel="stylesheet" type="text/css" href="CustomFormTask.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="CustomFormTask.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+  <title>Custom Form</title>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toCollapse" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="toCollapse">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+          Customers
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Item</a>
+          <a class="dropdown-item" href="#">Item</a>
+          <a class="dropdown-item" href="#">Item</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+          Tasks
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Item</a>
+          <a class="dropdown-item" href="#">Item</a>
+          <a class="dropdown-item" href="#">Item</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+          Work Time
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Item</a>
+          <a class="dropdown-item" href="#">Item</a>
+          <a class="dropdown-item" href="#">Item</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+          Calender
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Item</a>
+          <a class="dropdown-item" href="#">Item</a>
+          <a class="dropdown-item" href="#">Item</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+          Administration
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Employees</a>
+          <a class="dropdown-item" href="#">Item</a>
+          <a class="dropdown-item" href="#">Item</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+          Report
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Item</a>
+          <a class="dropdown-item" href="#">Item</a>
+          <a class="dropdown-item" href="#">Item</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+          Finance
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Item</a>
+          <a class="dropdown-item" href="#">Item</a>
+          <a class="dropdown-item" href="#">Item</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+          User Guide
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Item</a>
+          <a class="dropdown-item" href="#">Item</a>
+          <a class="dropdown-item" href="#">Item</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb mb-0">
+    <li class="breadcrumb-item"><a id="administrationBreadcrumb" href="#">Administration</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Employees</li>
+  </ol>
+</nav>
+
+<p class="text-center text-align-center" id="employee">Employee</p>
+
+<!--  <form class="ml-2" id="mainForm" data-toggle="validator" role="form"> -->
+    <div class="row">
+      <div class="form-group row col-lg-10">
+        <label for="firstName" class="col-lg-2 col-4 col-form-label mt-2">First Name:</label>
+        <div class="col-lg-4 col-8 mt-2">
+            <input class="form-control required" type="text" id="firstName" name="First name">
+        </div>
+        <label for="firstNameNat" class="col-lg-2 col-4 col-form-label mt-2">First Name (Native lang):</label>
+        <div class="col-lg-4 col-8 mt-2">
+          <input class="form-control required" type="text" id="firstNameNat" name="First Name (Native lang)">
+        </div>
+        <label for="lastName" class="col-lg-2 col-4 col-form-label mt-2">Last Name:</label>
+        <div class="col-lg-4 col-8 mt-2">
+              <input class="form-control required" type="text" id="lastName" name="Last name">
+        </div>
+        <label for="lastNameNat" class="col-lg-2 col-4 col-form-label mt-2">Last Name (Native lang):</label>
+        <div class="col-lg-4 col-8 mt-2">
+            <input class="form-control required" type="text" id="lastNameNat" name="Last Name (Native lang)">
+        </div>
+          <label for="phone" class="col-lg-2 col-4 col-form-label mt-2">Phone:</label>
+          <div class="col-lg-4 col-8 mt-2">
+              <input class="form-control required" type="text" id="phone" name="Phone">
+          </div>
+          <label for="mobPhone" class="col-lg-2 col-4 col-form-label mt-2">Mobile phone:</label>
+          <div class="col-lg-4 col-8 mt-2">
+              <input class="form-control" type="text" id="mobPhone">
+          </div>
+          <label for="office" class="col-lg-2 col-4 col-form-label mt-2">Office:</label>
+          <div class="col-lg-4 col-8 mt-2">
+            <select class="form-control col-9 mr-0" id="office">
+              <option>First</option>
+              <option>Second</option>
+              <option>Third</option>
+            </select>
+          </div>
+          <label for="email" class="col-lg-2 col-4 col-form-label mt-2">Email:</label>
+          <div class="col-lg-4 col-8 mt-2">
+              <input class="form-control required" type="text" id="email" name="Email">
+          </div>
+          <label for="address" class="col-lg-2 col-4 col-form-label mt-2 align-bottom">Address:</label>
+          <div class="col-lg-4 col-8 mt-2">
+              <textarea class="form-control required" class="form-control" id="address" rows="5" name="Address"></textarea>
+          </div>
+          <label for="workingHours" class="col-lg-2 col-4 col-form-label mt-2 align-bottom">Working hours per day:</label>
+          <div class="col-lg-4 col-8 mt-2">
+              <input class="form-control" type="text" id="workingHours">
+          </div>
+          <label for="dateOfRecruitment" class="col-lg-2 col-4 col-form-label mt-2">Date of recruitment:</label>
+          <div class="col-lg-4 col-8 mt-2">
+              <input class="form-control required" type="date" id="dateOfRecruitment" value="" name="Date of recruitment">
+          </div>
+          <label for="endOfProbation" class="col-lg-2 col-4 col-form-label mt-2">End of probation:</label>
+          <div class="col-lg-4 col-8 mt-2">
+              <input class="form-control" type="date" id="endOfProbation" value="">
+          </div>
+          <label for="dateOfDeparture" class="col-lg-2 col-4 col-form-label mt-2">Date of departure:</label>
+          <div class="col-lg-4 col-8 mt-2">
+              <input class="form-control required" type="date" id="dateOfDeparture" value="" name="Date of departure">
+          </div> 
+          <label for="active" class="col-lg-2 col-4 col-form-label mt-2">Active:</label>
+          <div class="col-lg-4 col-8 mt-2">
+              <input class="form-control" class="form-check-input" type="checkbox" name="active" id="active" value="option1" checked>
+          </div> 
+          <label for="birthDate" class="col-lg-2 col-4 col-form-label mt-2">Birth date:</label>
+          <div class="col-lg-4 col-8 mt-2">
+              <input class="form-control required" type="date" id="birthDate" value="" name="Birth date">
+          </div>
+          <label for="hourlyRate" class="col-lg-2 col-4 col-form-label mt-2">Hourly rate:</label>
+          <div class="col-lg-4 col-8 mt-2">
+              <input class="form-control" type="text" id="hourlyRate">
+          </div>
+        <label for="teamled" class="col-lg-2 col-4 col-form-label mt-2">Teamled(Groups):</label>
+        <div class="col-lg-4 col-8 mt-2">
+            <select class="form-control col-9 mr-0" id="teamled">
+              <option>First</option>
+              <option>Second</option>
+              <option>Third</option>
+          </select>
+        </div>
+        <label for="visibleFor" class="col-lg-2 col-4 col-form-label mt-2">Visible for groups:</label>
+        <div class="col-lg-4 col-8 mt-2">
+            <select class="form-control col-9 mr-0" id="visibleFor">
+              <option>First</option>
+              <option>Second</option>
+              <option>Third</option>
+            </select>
+        </div>
+      </div>
+    </div>
+    <div class="ml-2">
+      <button class="btn btn-secondary btn-sm" id="add"><i class="fas fa-download"></i><span id="addButtonText"> Add</span></button>
+      <button type="button" class="btn btn-secondary btn-sm" id="cancel"><i class="fas fa-long-arrow-alt-left"></i> Cancel</button>
+      <button type="button" class="btn btn-secondary btn-sm" disabled="true" id="delete">Delete</button>
+    </div>
+
+
+<!-- <div class="ml-2">
+  <button type="submit" class="btn btn-secondary btn-sm" id="add" disabled="disabled"><i class="fas fa-download"></i> Add </button>
+  <button type="button" class="btn btn-secondary btn-sm" id="cancel"><i class="fas fa-long-arrow-alt-left"></i> Cancel</button>
+  <button type="button" class="btn btn-secondary btn-sm disabled" id="delete">Delete</button>
+</div> -->
+  
+<p class="text-center mt-3" id="filter">Filter</p>
+
+<div class="col-10 ml-2 pl-0">
+  <form>
+    <div class="row">
+      <div class="form-group row col">
+        <label class="col-form-label col-3" for="officeSelect"> Office: </label>
+        <select class="form-control col-9" id="officeSelect">
+          <option value="">All</option>
+          <option value="First">First</option>
+          <option value="Second">Second</option>
+          <option value="Third">Third</option>
+        </select>
+      </div>
+      <div class="form-group row col">
+        <label for="active" class="col-form-label col-3">Active:</label>
+        <input class="form-check-input ml-6 col-9" type="checkbox" name="active" id="activeFilter" checked>
+      </div>
+    </div>
+    <button type="button" class="btn btn-secondary btn-sm" id="filterButton"> <i class="fas fa-filter"></i> Filter</button>
+    <button type="button" class="btn btn-secondary btn-sm" id="all"> <i class="fas fa-arrow-down"></i> All</button>
+</form>
+
+  
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Office</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">First Name (Native lang)</th>
+        <th scope="col">Last Name (Native lang)</th>
+      </tr>
+    </thead>
+    <tbody>
+   </tbody>
+  </table>
+</div>
+
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
